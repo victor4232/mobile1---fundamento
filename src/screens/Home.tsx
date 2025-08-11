@@ -102,7 +102,6 @@ const style = StyleSheet.create({
         textAlign: "center",
     },
    list:{
-        // backgroundColor : "red",
         flex: 1,
         // height:500,
         justifyContent: "center",
