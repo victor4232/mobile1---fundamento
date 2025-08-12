@@ -9,12 +9,12 @@ export function Home() {
 
     }
 
-    function handleProductRemove(name:string) {
-            // console.log("Voce clicou aqui !!" + name)
-            console.log(`Voce clicou aqui !! ${name}`)
+    function handleProductRemove(name: string) {
+        // console.log("Voce clicou aqui !!" + name)
+        console.log(`Voce clicou aqui !! ${name}`)
 
-        }
-    
+    }
+
     return (
         <View style={style.container}>
             <Text style={style.title}>Lista de Compras</Text>
@@ -36,10 +36,10 @@ export function Home() {
             </View>
 
             <Text style={style.listTitle}>Compras pendentes</Text>
-            
+
             <View style={style.list}>
                 {/* <Text style={style.listEmptyText}>Comprou todos os produtos? Adicione produtos a sua lista de compras</Text> */}
-                
+
                 <Product name="Iphone2" onRemove={() => handleProductRemove("Iphone")}>
                 </Product>
             </View>
@@ -67,13 +67,13 @@ const style = StyleSheet.create({
         fontWeight: "normal",
         lineHeight: 28.8,
     },
-    titleTable:{
+    titleTable: {
         marginTop: 16,
         color: "#000",
         fontSize: 16,
         fontWeight: "normal",
         lineHeight: 28.8,
-        
+
     },
     input: {
         flex: 1,
@@ -88,7 +88,7 @@ const style = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         marginTop: 18,
-        
+
         marginBottom: 36,
     },
     button: {
@@ -104,24 +104,24 @@ const style = StyleSheet.create({
         color: "#fff",
         fontSize: 24,
     },
-    listTitle:{
-        fontSize :20,
-        fontWeight : "bold",
+    listTitle: {
+        fontSize: 20,
+        fontWeight: "bold",
         lineHeight: 24,
         marginBottom: 16,
 
     },
-    listEmptyText:{
+    listEmptyText: {
         fontSize: 16,
         fontWeight: "normal",
         lineHeight: 19.2,
         flexWrap: "wrap",
         textAlign: "center",
     },
-   list:{
+    list: {
         flex: 1,
         // height:500,
         justifyContent: "center",
-   }
+    }
 
 })
