@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         // justifyContent:"space-between"
         borderBottomLeftRadius: 5,
         borderTopLeftRadius: 5,
+        marginBottom: 8,
 
     },
     name: {
