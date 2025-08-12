@@ -83,11 +83,13 @@ export function Home() {
             <View style={style.list}>
                 {/* <Text style={style.listEmptyText}>Comprou todos os produtos? Adicione produtos a sua lista de compras</Text> */}
 
-                <ScrollView>
+                {/* <ScrollView>
                     {
                         products.map((product) => <Product key={product} name={product} onRemove={() => handleProductRemove(product)} />)
                     }
-                </ScrollView>
+                </ScrollView> */}
+
+                
             </View>
 
         </View>
