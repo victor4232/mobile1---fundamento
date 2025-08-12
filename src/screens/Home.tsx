@@ -1,6 +1,20 @@
+
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
+import { Product } from "./components/Product";
+
 export function Home() {
+
+    function handleRemoveProduct() {
+
+    }
+
+    function handleProductRemove(name:string) {
+            // console.log("Voce clicou aqui !!" + name)
+            console.log(`Voce clicou aqui !! ${name}`)
+
+        }
+    
     return (
         <View style={style.container}>
             <Text style={style.title}>Lista de Compras</Text>
@@ -24,7 +38,10 @@ export function Home() {
             <Text style={style.listTitle}>Compras pendentes</Text>
             
             <View style={style.list}>
-                <Text style={style.listEmptyText}>Comprou todos os produtos? Adicione produtos a sua lista de compras</Text>
+                {/* <Text style={style.listEmptyText}>Comprou todos os produtos? Adicione produtos a sua lista de compras</Text> */}
+                
+                <Product name="Iphone2" onRemove={() => handleProductRemove("Iphone")}>
+                </Product>
             </View>
 
         </View>
