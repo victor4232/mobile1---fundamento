@@ -80,7 +80,6 @@ export function Home() {
 
             <Text style={style.listTitle}>Compras pendentes</Text>
 
-            <View style={style.list}>
                 {/* <Text style={style.listEmptyText}>Comprou todos os produtos? Adicione produtos a sua lista de compras</Text> */}
 
                 {/* <ScrollView>
@@ -90,8 +89,9 @@ export function Home() {
                 </ScrollView> */}
 
                 <FlatList
-                    data={products}
+                    data={[]}
                     keyExtractor={item => item}
+                    contentContainerStyle={style.list}
                     renderItem={({ item }) => <Product name={item} onRemove={() => handleProductRemove(item)} />}
                     showsVerticalScrollIndicator={false}
                     ListEmptyComponent={() => (
@@ -100,8 +100,6 @@ export function Home() {
                         </Text>
                     )}
                 />
-
-            </View>
 
         </View>
     )
@@ -178,8 +176,8 @@ const style = StyleSheet.create({
         textAlign: "center",
     },
     list: {
-        flex: 1,
-        // height:500,
+        
+        flexGrow: 1,
         justifyContent: "center",
     }
 
